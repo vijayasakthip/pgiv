@@ -110,6 +110,20 @@ html {
      height: 100%;
 }
 
+#contactimage{
+  
+    width: 100%;
+    height: 100%;
+}
+#contactimagecolumn{
+    margin-top:154.5px;
+}
+@media(max-width:500px){
+    #contactimagecolumn{
+        margin-top: 0px;
+    }
+}
+
     </style>
 </head>
 
@@ -409,8 +423,8 @@ html {
 <!-- Service End -->
 
 <!-- Contact Start -->
-<div id="contact" class="container-fluid overflow-hidden py-5 px-lg-0">
-    <div class="container contact-page py-5 px-lg-0">
+<div id="contact" class="container-fluid overflow-hidden py-2 px-lg-0">
+    <div class="container contact-page py-2 px-lg-0">
         <div class="row g-5 mx-lg-0">
             <!-- Contact Form -->
             <div class="col-md-6 contact-form wow fadeIn" data-wow-delay="0.1s">
@@ -443,8 +457,8 @@ html {
                 </div>
             </div>
             <!-- Contact Information -->
-            <div class="col-md-6" style="margin-top:154.5px;">
-                <img src="img/contactus.png" alt="" style="width: 100%;height: 100%;">
+            <div class="col-md-6" id="contactimagecolumn">
+                <img src="img/contactus.png" alt="" id="contactimage">
                    
                 </div>
             </div>
@@ -454,7 +468,7 @@ html {
 <!-- Contact End -->
 
   <!-- Footer Start -->
-<div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 6rem;">
+<div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn" data-wow-delay="0.1s" style="margin-top: 3rem;">
     <div class="container">
         <div class="row g-5">
             <div class="col-lg-3 col-md-6">
