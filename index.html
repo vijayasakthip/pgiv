@@ -123,6 +123,44 @@ html {
         margin-top: 45px;
     }
 }
+.background, .background1 {
+    position: relative; /* Ensure proper positioning of overlay and text */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centering the content */
+}
+
+.background::before, .background1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: 1; /* Ensure the overlay is above the background but below the text */
+}
+
+.background {
+    background-image: url('img/banner 1.png');
+}
+
+.background1 {
+    background-image: url('img/Banner 2.png');
+}
+
+.background > .content, .background1 > .content {
+    position: relative; /* Ensure text is above the overlay */
+    z-index: 2; /* Text should be above the overlay */
+    color: white; /* Text color for readability */
+    text-align: center; /* Center text alignment */
+    padding: 0 20px; /* Optional padding for better text positioning */
+}
 
     </style>
 </head>
@@ -157,48 +195,25 @@ html {
 
 
 
-
-
-
-
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 pb-5">
-        <div class="owl-carousel header-carousel position-relative mb-2">
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/banner 1.png" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown"></h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Prasan Global Infinity Ventures</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Where Efficiency Meets Reliability: Comprehensive Solutions for Global Supply Chains<br>
-                                    Moving the World Forward: Innovative Logistics Tailored to Your Needs</p>
-                           
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/Banner 2.png" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(6, 3, 21, .5);">
-                    <div class="container">
-                        <div class="row justify-content-start">
-                            <div class="col-10 col-lg-8">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown"></h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">Prasan Global Infinity Ventures</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">Where Efficiency Meets Reliability: Comprehensive Solutions for Global Supply Chains<br>
-                                    Moving the World Forward: Innovative Logistics Tailored to Your Needs</p>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
+<div class="background">
+    <div class="content">
+        <h1 class="display-3 animated slideInDown mb-4" style="color:white;">Phoneix Cargo Services PVT LTD</h1>
+        <p class="fs-5 fw-medium mb-4 pb-2">
+            Delivering Excellence Across Borders: Your Trusted Partner in Global Logistics <br>
+            Navigating Your Success: Precision Logistics for a Dynamic World
+        </p>
     </div>
-    <!-- Carousel End -->
+</div>
+<div class="background1">
+    <div class="content">
+        <h1 class="display-3 animated slideInDown mb-4" style="color:white;">Phoneix Cargo Services PVT LTD</h1>
+        <p class="fs-5 fw-medium mb-4 pb-2">
+            Delivering Excellence Across Borders: Your Trusted Partner in Global Logistics <br>
+            Navigating Your Success: Precision Logistics for a Dynamic World
+        </p>
+    </div>
+</div>
 
 <!-- About Start -->
 <div id="about-us" class="container-fluid overflow-hidden py-2 px-lg-0">
@@ -629,10 +644,10 @@ document.addEventListener("DOMContentLoaded", function() {
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
     // Fixed scroll threshold values
-    const homeThreshold = 700;        // Highlight Home up to 700px from the top
-    const aboutThreshold = 2000;      // Adjust these values as needed
-    const servicesThreshold = 3700;   // Adjust these values as needed
-    const contactThreshold = 7000;   // Adjust this value to the top of the contact section
+    const homeThreshold = 1500;        // Highlight Home up to 700px from the top
+    const aboutThreshold = 2500;      // Adjust these values as needed
+    const servicesThreshold = 6000;   // Adjust these values as needed
+    const contactThreshold = 9000;   // Adjust this value to the top of the contact section
 
     // Function to highlight nav links based on scroll position
     function onScroll() {
